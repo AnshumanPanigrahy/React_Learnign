@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react'
+
+const  allBrand=[
+    {id:1,brand:'puma'},
+    {id:2,brand:'adidas'},
+    {id:3,brand:'bat'},
+    {id:4,brand:'titan'},
+    {id:5,brand:'techno Sports'},
+    {id:6,brand:'reebok'},
+]
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    let [brands,setBrand]=useState(allBrand)
+
+    function onSearchChange(event) {
+        let filteredBrand;
+        filteredBrand = event.target.value.length > 0 ? brands.filter(branded => branded.brand.includes(event.target.value.toLowerCase())) : allBrand;
+        setBrand(filteredBrand)
+    }
+
+    return (
+    <>
+        <input onChange={onSearchChange} placeholder="Search..."/>
+        <ul>
+            {
+            brands.map(branded=><li key={branded.id}>{branded.brand}</li>)
+            }
+        </ul>
+    </>
   );
 }
 
