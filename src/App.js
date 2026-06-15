@@ -1,46 +1,28 @@
 import './App.css';
-import {useState} from 'react'
+import {useState,useRef} from 'react'
 
-const  allBrand=[
-    {id:1,brand:'puma'},
-    {id:2,brand:'adidas'},
-    {id:3,brand:'bat'},
-    {id:4,brand:'titan'},
-    {id:5,brand:'techno Sports'},
-    {id:6,brand:'reebok'},
-]
+
 
 function App() {
-    const [selectedBrand, setSelectedBrand] = useState([]);
+    const [count, setCount] = useState(0);
+    const timerRef = useRef("Anshuman");
+    // eslint-disable-next-line no-unused-vars
 
-    function onAddToCartClick(id) {
-             const  selectedItem=allBrand.find(item => item.id === id);
-             setSelectedBrand([...selectedBrand,selectedItem])
+    const onStartClick=()=>{
+            timerRef.current=setInterval(()=>{
+                setCount(count => count + 1)
+            },100)
+        console.log({timerRef})
     }
-    const onRemoveClick=(id)=>{
-         const filteredItem=selectedBrand.filter(item => item.id !== id);
-         setSelectedBrand(filteredItem)
-    }
-
+     const onStopClick=()=>{
+        clearInterval(timerRef.current)
+         console.log({timerRef})
+     }
     return (
     <>
-        <div className="App">
-            <p>Add Brand to your Cart</p>
-            {
-                allBrand.map(item=>
-                    <div>
-                        <span>{item.brand}</span>
-                        <button onClick={()=>onAddToCartClick(item.id)}>Add To Cart</button>
-                    </div>
-                )
-            }
-        </div>
-        <div>
-            <p>Your Cart</p>
-            {
-                selectedBrand  &&   selectedBrand.map(item=><p>{item.brand}:<button onClick={()=>onRemoveClick(item.id)}>Remove</button></p>)
-            }
-        </div>
+      <p>Count-{count}</p>
+        <button onClick={onStartClick}>Start</button>
+        <button onClick={onStopClick}>Stop</button>
     </>
   );
 }
