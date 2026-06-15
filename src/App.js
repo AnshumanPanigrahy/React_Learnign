@@ -11,22 +11,36 @@ const  allBrand=[
 ]
 
 function App() {
-    let [brands,setBrand]=useState(allBrand)
+    const [selectedBrand, setSelectedBrand] = useState([]);
 
-    function onSearchChange(event) {
-        let filteredBrand;
-        filteredBrand = event.target.value.length > 0 ? brands.filter(branded => branded.brand.includes(event.target.value.toLowerCase())) : allBrand;
-        setBrand(filteredBrand)
+    function onAddToCartClick(id) {
+             const  selectedItem=allBrand.find(item => item.id === id);
+             setSelectedBrand([...selectedBrand,selectedItem])
+    }
+    const onRemoveClick=(id)=>{
+         const filteredItem=selectedBrand.filter(item => item.id !== id);
+         setSelectedBrand(filteredItem)
     }
 
     return (
     <>
-        <input onChange={onSearchChange} placeholder="Search..."/>
-        <ul>
+        <div className="App">
+            <p>Add Brand to your Cart</p>
             {
-            brands.map(branded=><li key={branded.id}>{branded.brand}</li>)
+                allBrand.map(item=>
+                    <div>
+                        <span>{item.brand}</span>
+                        <button onClick={()=>onAddToCartClick(item.id)}>Add To Cart</button>
+                    </div>
+                )
             }
-        </ul>
+        </div>
+        <div>
+            <p>Your Cart</p>
+            {
+                selectedBrand  &&   selectedBrand.map(item=><p>{item.brand}:<span>{count}</span>-<button onClick={()=>onRemoveClick(item.id)}>Remove</button></p>)
+            }
+        </div>
     </>
   );
 }
