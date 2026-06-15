@@ -38,7 +38,7 @@ function App() {
         <div>
             <p>Your Cart</p>
             {
-                selectedBrand  &&   selectedBrand.map(item=><p>{item.brand}:<span>{count}</span>-<button onClick={()=>onRemoveClick(item.id)}>Remove</button></p>)
+                selectedBrand  &&   selectedBrand.map(item=><p>{item.brand}:<button onClick={()=>onRemoveClick(item.id)}>Remove</button></p>)
             }
         </div>
     </>
