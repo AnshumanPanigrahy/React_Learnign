@@ -1,31 +1,48 @@
 import './App.css';
-import {useRef,forwardRef} from 'react'
-
-
-const MyBtn=forwardRef(
-    (props,ref)=>{
-    console.log(props)
-    return (
-        <input ref={ref} placeholder='Serching'/>
-    );
-})
+import {useReducer} from 'react'
 
 
 function App() {
+   // const [price, setPrice] = useState("")
+   // const[discount, setDiscount] = useState("40")
+   // const [rating, setRating] = useState()
 
-    const inputRef = useRef(0);
+    const initialState = {
+        count: 0
+    }
 
-    const onFocusClick = () => {
-        if(inputRef.current){
-            inputRef.current.focus();
+
+    function reducerFun(state, action) {
+        switch(action.type) {
+            case 'INCREMENT':
+                return {
+                    ...state,
+                    count: state.count + 1
+                }
+            case 'DECREMENT':
+                return {
+                    ...state,
+                    count: state.count - 1
+                }
+            default:
+                return state;
         }
+
+    }
+
+    const [state,dispatch]=useReducer(reducerFun,initialState)
+     //console.log(state)
+
+    function onDecClick() {
+        dispatch({type:'DECREMENT'})
     }
 
     return (
-    <>
-        <MyBtn placeholder="Searching Something" ref={inputRef}/>
-        <button onClick={onFocusClick}>Focus on Input</button>
-    </>
+    <div className="App">
+       <h2>{state.count}</h2>
+        <button onClick={()=>dispatch({type:'INCREMENT'})}>Inc</button>
+        <button onClick={onDecClick}>Dec</button>
+    </div>
   );
 }
 
