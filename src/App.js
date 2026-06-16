@@ -30,7 +30,7 @@ function App() {
 
     }
 
-    const [state,dispatch]=useReducer(reducerFun,initialState)
+    const [{count},dispatch]=useReducer(reducerFun,initialState)
      //console.log(state)
 
     function onDecClick() {
@@ -39,7 +39,7 @@ function App() {
 
     return (
     <div className="App">
-       <h2>{state.count}</h2>
+       <h2>{count}</h2>
         <button onClick={()=>dispatch({type:'INCREMENT'})}>Inc</button>
         <button onClick={onDecClick}>Dec</button>
     </div>
