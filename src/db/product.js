@@ -1,0 +1,147 @@
+
+export const products=[
+    {
+        "id": 1,
+        "name": "Wireless Noise-Cancelling Headphones",
+        "brand": "AeroAudio",
+        "category": "Electronics",
+        "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+        "originalPrice": 249.99,
+        "currentPrice": 189.99,
+        "discountPercentage": 24,
+        "rating": 4.7,
+        "inStock": true
+    },
+    {
+        "id": 2,
+        "name": "Minimalist Leather Watch",
+        "brand": "Chronos",
+        "category": "Accessories",
+        "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+        "originalPrice": 120.00,
+        "currentPrice": 90.00,
+        "discountPercentage": 25,
+        "rating": 4.5,
+        "inStock": true
+    },
+    {
+        "id": 3,
+        "name": "Ergonomic Mechanical Keyboard",
+        "brand": "KeyClick",
+        "category": "Electronics",
+        "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+        "originalPrice": 85.00,
+        "currentPrice": 85.00,
+        "discountPercentage": 0,
+        "rating": 4.8,
+        "inStock": true
+    },
+    {
+        "id": 4,
+        "name": "Stainless Steel Water Bottle",
+        "brand": "HydroFlow",
+        "category": "Fitness",
+        "imageUrl": "https://images.unsplash.com/photo-1602143407151-7111542de6e8",
+        "originalPrice": 35.00,
+        "currentPrice": 28.00,
+        "discountPercentage": 20,
+        "rating": 4.3,
+        "inStock": false
+    },
+    {
+        "id": 5,
+        "name": "Running Shoes - FlyLite",
+        "brand": "Stride",
+        "category": "Apparel",
+        "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+        "originalPrice": 110.00,
+        "currentPrice": 99.00,
+        "discountPercentage": 10,
+        "rating": 4.6,
+        "inStock": true
+    },
+    {
+        "id": 6,
+        "name": "Smart Fitness Tracker",
+        "brand": "FitPulse",
+        "category": "Electronics",
+        "imageUrl": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6",
+        "originalPrice": 59.99,
+        "currentPrice": 44.99,
+        "discountPercentage": 25,
+        "rating": 4.2,
+        "inStock": true
+    },
+    {
+        "id": 7,
+        "name": "Matte Finish Coffee Mug",
+        "brand": "Ceramika",
+        "category": "Kitchen",
+        "imageUrl": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd",
+        "originalPrice": 18.00,
+        "currentPrice": 15.00,
+        "discountPercentage": 16,
+        "rating": 4.4,
+        "inStock": true
+    },
+    {
+        "id": 8,
+        "name": "Portable Bluetooth Speaker",
+        "brand": "BoomBox",
+        "category": "Electronics",
+        "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
+        "originalPrice": 75.00,
+        "currentPrice": 55.00,
+        "discountPercentage": 26,
+        "rating": 4.7,
+        "inStock": true
+    },
+    {
+        "id": 9,
+        "name": "Classic Canvas Backpack",
+        "brand": "PackCo",
+        "category": "Accessories",
+        "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+        "originalPrice": 45.00,
+        "currentPrice": 45.00,
+        "discountPercentage": 0,
+        "rating": 4.5,
+        "inStock": true
+    },
+    {
+        "id": 10,
+        "name": "Organic Lavender Candle",
+        "brand": "AromaTherapy",
+        "category": "Home Decor",
+        "imageUrl": "https://images.unsplash.com/photo-1603006905003-be475563bc59",
+        "originalPrice": 22.00,
+        "currentPrice": 17.60,
+        "discountPercentage": 20,
+        "rating": 4.9,
+        "inStock": true
+    },
+    {
+        "id": 11,
+        "name": "Anti-Glare Desk Lamp",
+        "brand": "Lumina",
+        "category": "Home Decor",
+        "imageUrl": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c",
+        "originalPrice": 49.99,
+        "currentPrice": 39.99,
+        "discountPercentage": 20,
+        "rating": 4.3,
+        "inStock": true
+    },
+    {
+        "id": 12,
+        "name": "Polarized Sunglasses",
+        "brand": "RayShade",
+        "category": "Accessories",
+        "imageUrl": "https://images.unsplash.com/photo-1511499767150-a48a237f0083",
+        "originalPrice": 135.00,
+        "currentPrice": 115.00,
+        "discountPercentage": 14,
+        "rating": 4.6,
+        "inStock": false
+    }
+]

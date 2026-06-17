@@ -1,4 +1,87 @@
 body {
-  text-align: center;
+  /*text-align: left;*/
   color: white;
+}
+/* The main container for your app */
+/* 1. Parent container: Creates a responsive grid of cards */
+.flex.gap-16px.app {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+  gap: 20px !important;
+  padding: 20px !important;
+}
+
+/* 2. Individual Product Card styling */
+.flex.flex-col.border {
+  display: flex !important;
+  flex-direction: column !important;
+  border: 1px solid yellow !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  background-color: black !important;
+  transition: transform 0.2s !important;
+  height: 100% !important;
+  image-orientation: from-image !important;
+
+}
+
+/* Hover effect for interactivity */
+.flex.flex-col.border:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 3. Image Section (Top div) */
+.flex.flex-col.border > div:first-child {
+  height: 180px !important;
+  background-color: #f7f7f7 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: saddlebrown !important;
+}
+
+/* 4. Product Inf 6o Area (Middle container) */
+.flex.flex-col.border > .flex.gap-8px {
+  padding: 16px !important;
+  flex-grow: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+/* Typography styles for title, category, and price */
+.flex.flex-col.border > .flex.gap-8px p:nth-child(1) {
+  font-weight: bold !important;
+  font-size: 16px !important;
+  color: #984545 !important;
+}
+
+.flex.flex-col.border > .flex.gap-8px p:nth-child(2) {
+  font-size: 12px !important;
+  color: rgb(32 2 2 / 0.75) !important;
+}
+
+.flex.flex-col.border > .flex.gap-8px p:nth-child(3) {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #e44d26 !important;
+}
+
+/* 5. Footer/Action Area with Button */
+.flex.flex-col.border > div:last-child {
+  padding: 12px !important;
+  border-top: 1px solid #e70c0c !important;
+}
+
+.flex.flex-col.border button {
+  width: 100% !important;
+  padding: 10px !important;
+  background-color: #007bff !important;
+  color: black !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
 }

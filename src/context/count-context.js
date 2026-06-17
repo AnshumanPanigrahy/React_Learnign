@@ -1,20 +1,23 @@
-import {createContext,useContext,useState} from 'react';
+import {createContext, useContext, useReducer, useState} from 'react';
+import {cartReducer} from "../raducer/cartReducer";
 
+const CartContext = createContext(0)
 
+const CartProvider=({children})=>{
 
+    const initialState={
+        cart:[]
+    }
 
-const CountContext = createContext(0);
-//Provider
-const CountProvider=({children})=>{
-    const [count,setCount]=useState(111)
+    const [{cart},cartDispatch]=useReducer(cartReducer,initialState)
 
-    return(
-        <CountContext.Provider value={{count,setCount}}>
+    return (
+
+        <CartContext.Provider value={{cart,cartDispatch}}>
             {children}
-        </CountContext.Provider>
+        </CartContext.Provider>
     )
 }
-//consumer
-const useCount = () => useContext(CountContext)
+const useCart=()=>useContext(CartContext)
 
-export {useCount,CountProvider}
+export {useCart,CartProvider}
