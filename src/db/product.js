@@ -1,7 +1,7 @@
-
+import {v7 as uuid} from 'uuid'
 export const products=[
     {
-        "id": 1,
+        "id": uuid(),
         "name": "Wireless Noise-Cancelling Headphones",
         "brand": "AeroAudio",
         "category": "Electronics",
@@ -13,7 +13,7 @@ export const products=[
         "inStock": true
     },
     {
-        "id": 2,
+        "id":uuid(),
         "name": "Minimalist Leather Watch",
         "brand": "Chronos",
         "category": "Accessories",
@@ -25,7 +25,7 @@ export const products=[
         "inStock": true
     },
     {
-        "id": 3,
+        "id": uuid(),
         "name": "Ergonomic Mechanical Keyboard",
         "brand": "KeyClick",
         "category": "Electronics",
@@ -37,7 +37,7 @@ export const products=[
         "inStock": true
     },
     {
-        "id": 4,
+        "id":uuid(),
         "name": "Stainless Steel Water Bottle",
         "brand": "HydroFlow",
         "category": "Fitness",
@@ -49,7 +49,7 @@ export const products=[
         "inStock": false
     },
     {
-        "id": 5,
+        "id":uuid(),
         "name": "Running Shoes - FlyLite",
         "brand": "Stride",
         "category": "Apparel",
@@ -61,7 +61,7 @@ export const products=[
         "inStock": true
     },
     {
-        "id": 6,
+        "id": uuid(),
         "name": "Smart Fitness Tracker",
         "brand": "FitPulse",
         "category": "Electronics",
@@ -73,7 +73,7 @@ export const products=[
         "inStock": true
     },
     {
-        "id": 7,
+        "id": uuid(),
         "name": "Matte Finish Coffee Mug",
         "brand": "Ceramika",
         "category": "Kitchen",
@@ -85,7 +85,7 @@ export const products=[
         "inStock": true
     },
     {
-        "id": 8,
+        "id": uuid(),
         "name": "Portable Bluetooth Speaker",
         "brand": "BoomBox",
         "category": "Electronics",
@@ -97,7 +97,7 @@ export const products=[
         "inStock": true
     },
     {
-        "id": 9,
+        "id": uuid(),
         "name": "Classic Canvas Backpack",
         "brand": "PackCo",
         "category": "Accessories",
@@ -109,7 +109,7 @@ export const products=[
         "inStock": true
     },
     {
-        "id": 10,
+        "id": uuid(),
         "name": "Organic Lavender Candle",
         "brand": "AromaTherapy",
         "category": "Home Decor",
@@ -121,7 +121,7 @@ export const products=[
         "inStock": true
     },
     {
-        "id": 11,
+        "id": uuid(),
         "name": "Anti-Glare Desk Lamp",
         "brand": "Lumina",
         "category": "Home Decor",
@@ -133,7 +133,7 @@ export const products=[
         "inStock": true
     },
     {
-        "id": 12,
+        "id": uuid(),
         "name": "Polarized Sunglasses",
         "brand": "RayShade",
         "category": "Accessories",

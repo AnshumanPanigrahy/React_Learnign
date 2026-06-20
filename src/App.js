@@ -1,26 +1,16 @@
 import './App.css';
-import {Navbar} from './components/Navbar'
-import {Product} from './components/Products'
-import { products } from "./db/product";
+import {Routes,Route} from "react-router-dom";
+import {Products} from "./pages/Products";
+import {ProductDetail} from "./pages/ProductDetail";
 
 
 function App() {
-
-
     return (
-    <div className="App">
-        <Navbar className="app-header"/>
-        <h1 className="app">Product</h1>
-        <div className='flex gap-16px app'>
-            {products.length > 0 ? (
-                products.map(item => <Product key={item.id} product={item} />)
-                 ) : (
-                 <p>No products found.</p>
-            )}
-        </div>
-
-    </div>
-  );
+        <Routes>
+            <Route path="/" element={<Products />} />
+            <Route path="/productDetail/:productId" element={<ProductDetail />} />
+        </Routes>
+    );
 }
 
 export default App;
